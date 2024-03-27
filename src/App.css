@@ -1,0 +1,114 @@
+:root {
+    --Scissors-Gradient: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    --Paper-Gradient: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    --Rock-Gradient: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    --Lizard-Gradient: linear-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+    --Cyan: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+    --Dark-Text: hsl(229, 25%, 31%);
+    --Score-Text: hsl(229, 64%, 46%);
+    --Header-Outline: hsl(217, 16%, 45%);
+    --Radial-Gradient: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    --White: #fff;
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-image: var(--Radial-Gradient);
+    height: calc(100vh - 2em);
+    color: var(--White);
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+.board {
+    margin-top: 2em;
+    padding: 2em;
+    border: 3px solid var(--Header-Outline);
+    border-radius: 1em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.board__box {
+    background: var(--White);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .6em 3.5em;
+    border-radius: 1em;
+}
+.box__score {
+    color: var(--Score-Text);
+    font-size: 1rem;
+    font-weight: 500;
+}
+.box__num {
+    color: var(--Dark-Text);
+    font-size: 5rem;
+}
+
+
+/* buttons start */
+.buttons {
+    margin-top: 7em;
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    justify-content: center;
+    margin-inline: auto;
+    gap: 3em;
+    position: relative;
+}
+
+.buttons::after {
+    content: "";
+    position: absolute;
+    top: 6em;
+    width: 50%;
+    height: 60%;
+    border: 10px solid green;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    z-index: -1;
+}
+
+
+.btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons > .btn {
+    background: var(--White);
+    border-radius: 50%;
+    padding: 3em;
+}
+
+.image__btn {
+    height: 50px;
+}
+.btn--rock {
+    border: 20px solid red;
+}
+.btn--paper {
+    border: 20px solid blue;
+}
+.btn--scissor{
+    border: 20px solid yellow;
+}
+
+/* buttons end */
